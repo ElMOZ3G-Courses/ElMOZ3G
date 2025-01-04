@@ -1,7 +1,9 @@
+let about = document.querySelector('.about')
 let sec = document.querySelector('.sec1')
 let button11 = document.getElementById('bu1')
 button11.onclick = function(){
-    sec.scrollIntoView()
+    sec.style.display='block'
+    setTimeout(function(){sec.scrollIntoView(),about.style.display='block'},100);
 }
 let whatsapp = document.querySelector('.WhatsApp')
 let telegram = document.querySelector('.telegram')
@@ -18,9 +20,14 @@ youtube.onclick = function(){
 let learn = document.getElementById('learn')
 let sec2 = document.querySelector('.sec2')
 learn.onclick = function(){
-    sec2.scrollIntoView()
+    sec2.style.display='block'
+    setTimeout(function(){sec2.scrollIntoView()},1000);
 }
 let start = document.getElementById('bu-start')
 start.onclick = function(){
-    setTimeout(function(){window.location.href = "login/login.html"},1000);
+    setTimeout(function(){window.location.href = "login/login.html"},100);
+}
+let header = document.querySelector('.hed1')
+if(window){
+    header.scrollIntoView()
 }
