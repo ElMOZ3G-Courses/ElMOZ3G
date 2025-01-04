@@ -1,0 +1,22 @@
+body{
+    background-image: linear-gradient(to right , rgb(91, 83, 100) , rgb(95, 64, 207));
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 80px;
+    padding: 10px;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+.logo-img{
+    width: 100px;
+    height: 100px
+}

@@ -1,0 +1,1018 @@
+.bd{
+    background-image: linear-gradient(to left , white , rgb(77, 42, 204));
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+.hed1{
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 80px;
+    padding: 10px;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size: 20px;}
+.name-top{margin-right: 200px; margin-left: 30px; font-size: 35px; animation-name: name; animation-duration: 2s;}
+.name-top:hover{color: rgb(255, 255, 255); transform: scale(0.96)}
+
+.contaner{
+    margin-top: 120px;
+    margin-left: 50px;
+}
+.up{color: rgb(106, 87, 177); animation-name: up; animation-duration: 3s;}
+.up:hover{
+    color: rgb(76, 27, 253);
+}
+@keyframes up{
+    1%{     color: rgb(255, 255, 255);
+    }
+    100%{
+        color: rgb(106, 87, 177);
+    }
+}
+.in{color: rgb(106, 87, 177); animation-name: in; animation-duration: 3s;}
+.in:hover{
+    color: rgb(76, 27, 253);
+}
+@keyframes in{
+    1%{     color: rgb(255, 255, 255);
+    }
+    100%{
+        color: rgb(106, 87, 177);
+    }
+}
+.links{color: rgb(106, 87, 177); margin-left: 900px; animation-name: links; animation-duration: 3s;}
+.links:hover{
+    color: rgb(76, 27, 253);
+}
+@keyframes links {
+    1%{     color: rgb(255, 255, 255);
+    }
+    100%{
+        color: rgb(106, 87, 177);
+    }
+}
+.eff{
+    margin-left: 50px;
+    margin-bottom: 5px;
+    animation-name: eff;
+    animation-duration: 5s;
+    margin-top: 0;
+    padding: 0;
+}
+@keyframes eff{
+    1%{
+        margin-top: 145px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+.bu11{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid;
+    margin-top: 5px;
+    width: 220px;
+    margin-left: 120px;
+    animation-name: bu;
+    animation-duration: 3s;
+}
+@keyframes bu{
+    1%{
+        color: rgb(77, 42, 204);
+    }
+    100%{
+        color: white;
+    }
+}
+.bu11:hover{
+    cursor: pointer;
+    transform: scale(0.98);
+    background-image: linear-gradient(to right ,  rgb(114, 91, 196) , rgb(79, 49, 187));
+
+} 
+
+.content{
+    color: white;
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    animation-name: p;
+    animation-duration: 3s;
+    margin-top: 0;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+@keyframes name{
+    1%{
+        color: rgb(77, 42, 204);
+    }
+    100%{
+        color: white;
+    }
+}
+@keyframes p{
+    1%{
+        color: rgb(77, 42, 204);
+    }
+    100%{
+        color: white;
+    }
+}
+.sec-h22{
+    color: white;
+    width: 80%;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    animation-name: p;
+    animation-duration: 3s;
+    margin-top: 0;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+.h22{
+    color: white;
+    animation-name: h22;
+    animation-duration: 2s;
+}
+.sec1{
+    margin-top: 310px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    max-width: 1250px;
+    height: 650px;
+    margin-bottom: 30px;
+    animation-name: sec;
+    animation-direction: 6s;
+
+}
+@keyframes sec{
+    1%{
+        color: rgb(77, 42, 204);
+        border: 1px solid rgb(77, 42, 204);
+        margin-top: 310px;
+    }
+    100%{
+        color: white;
+        border: 1px solid rgb(255, 255, 255);
+        margin-top: 0;
+    }
+}
+@keyframes h22{
+    1%{
+        color: rgb(77, 42, 204);
+    }
+    100%{
+        color: white;
+    }
+}
+.cs22{
+    animation-name: cs;
+    animation-duration: 2s;
+    margin-top: 50px;
+}
+@keyframes cs{
+    1%{
+        color: rgb(77, 42, 204);
+    }
+    100%{
+        color: white;
+    }
+}
+.start{
+    width: 180px;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.start:hover{
+    cursor: pointer;
+    transform: scale(0.98);
+    background-image: linear-gradient(to right ,  rgb(138, 117, 211) , rgb(67, 41, 160));
+}
+span{
+    letter-spacing: 2px;
+}
+
+
+.sec2{
+    margin-top: 310px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    max-width: 1250px;
+    height: 650px;
+    margin-bottom: 30px;
+}
+.sec2 h2{
+    color: white;
+}
+
+
+
+
+
+
+@media screen and (width: 1280px) {
+    .bd{
+        background-image: linear-gradient(to left , white , rgb(77, 42, 204));
+    }
+    
+    *{
+        scroll-behavior: smooth;
+    }
+    
+    .hed1{
+        background-color: transparent;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 80px;
+        padding: 10px;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+    a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size: 20px;}
+    .name-top{margin-right: 980px; margin-left: 30px; font-size: 35px; margin-top: 20px; animation-name: name; animation-duration: 2s;}
+    .name-top:hover{color: rgb(255, 255, 255); transform: scale(0.96)}
+    .home{margin-left: 780px; color: rgb(106, 87, 177); animation-name: home; animation-duration: 3s;}
+    @keyframes home{
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(77, 42, 204);
+        }
+       
+    }
+    .contaner{
+        margin-top: 120px;
+        margin-left: 50px;
+    }
+    .up{color: rgb(106, 87, 177); animation-name: up; animation-duration: 3s;}
+    @keyframes up{
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(106, 87, 177);
+        }
+    }
+    .in{color: rgb(106, 87, 177); animation-name: in; animation-duration: 3s;}
+    @keyframes in{
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(106, 87, 177);
+        }
+    }
+    .links{color: rgb(106, 87, 177); animation-name: links; animation-duration: 3s;}
+    @keyframes links {
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(106, 87, 177);
+        }
+    }
+    .eff{
+        margin-left: 50px;
+        margin-bottom: 5px;
+        animation-name: eff;
+        animation-duration: 5s;
+        margin-top: 0;
+        padding: 0;
+    }
+    @keyframes eff{
+        1%{
+            margin-top: 145px;
+        }
+        100%{
+            margin-top: 0;
+        }
+    }
+    .bu11{
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        border-radius: 10px;
+        border: 1px solid;
+        margin-top: 5px;
+        width: 220px;
+        margin-left: 120px;
+        animation-name: bu;
+        animation-duration: 3s;
+    }
+    @keyframes bu{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .bu11:hover{
+        cursor: pointer;
+        transform: scale(0.98);
+    
+    } 
+    
+    .content{
+        color: white;
+        width: 50%;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        animation-name: p;
+        animation-duration: 3s;
+        margin-top: 0;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
+    @keyframes name{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    @keyframes p{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .sec-h22{
+        color: white;
+        width: 80%;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        animation-name: p;
+        animation-duration: 3s;
+        margin-top: 0;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
+    .h22{
+        color: white;
+        animation-name: h22;
+        animation-duration: 2s;
+    }
+    .sec1{
+        margin-top: 310px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        max-width: 1250px;
+        height: 650px;
+        margin-bottom: 30px;
+        animation-name: sec;
+        animation-direction: 6s;
+    
+    }
+    @keyframes sec{
+        1%{
+            color: rgb(77, 42, 204);
+            border: 1px solid rgb(77, 42, 204);
+            margin-top: 310px;
+        }
+        100%{
+            color: white;
+            border: 1px solid rgb(255, 255, 255);
+            margin-top: 0;
+        }
+    }
+    @keyframes h22{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .cs22{
+        animation-name: cs;
+        animation-duration: 2s;
+        margin-top: 50px;
+    }
+    @keyframes cs{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .start{
+        width: 180px;
+        height: 45px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    .start:hover{
+        cursor: pointer;
+        transform: scale(0.98);
+    }
+    p{
+        letter-spacing: 2px;
+    }
+    .about{
+        background-color: black;
+        color: white;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(161, 137, 249);
+        border: 1px solid white;
+        border-radius: 15px;
+    }
+    .WhatsApp:hover{
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+    
+    .telegram:hover{
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+    .foter-name{
+        animation-name: name-foter;
+        animation-duration: 3s;
+    }
+    @keyframes name-foter{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .youtube:hover{
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+    .contaner12{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 1000px;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .bd{
+        background-image: linear-gradient(to left , white , rgb(77, 42, 204));
+    }
+    
+    *{
+        scroll-behavior: smooth;
+    }
+    
+    .hed1{
+        background-color: transparent;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 80px;
+        padding: 10px;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+    a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size: 20px;}
+    .name-top{margin-right: 800px; margin-left: 30px; font-size: 35px; animation-name: name; animation-duration: 2s;}
+    .name-top:hover{color: rgb(255, 255, 255); transform: scale(0.96)}
+    .home{margin-left: 500px; color: rgb(106, 87, 177); animation-name: home; animation-duration: 3s;}
+    @keyframes home{
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(77, 42, 204);
+        }
+       
+    }
+    .contaner{
+        margin-top: 120px;
+        margin-left: 50px;
+    }
+    .up{color: rgb(106, 87, 177); animation-name: up; animation-duration: 3s;}
+    @keyframes up{
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(106, 87, 177);
+        }
+    }
+    .in{color: rgb(106, 87, 177); animation-name: in; animation-duration: 3s;}
+    @keyframes in{
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(106, 87, 177);
+        }
+    }
+    .links{color: rgb(106, 87, 177); animation-name: links; animation-duration: 3s;}
+    @keyframes links {
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(106, 87, 177);
+        }
+    }
+    .eff{
+        margin-left: 50px;
+        margin-bottom: 5px;
+        animation-name: eff;
+        animation-duration: 5s;
+        margin-top: 0;
+        padding: 0;
+    }
+    @keyframes eff{
+        1%{
+            margin-top: 145px;
+        }
+        100%{
+            margin-top: 0;
+        }
+    }
+    .bu11{
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        border-radius: 10px;
+        border: 1px solid;
+        margin-top: 5px;
+        width: 220px;
+        margin-left: 120px;
+        animation-name: bu;
+        animation-duration: 3s;
+    }
+    @keyframes bu{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .bu11:hover{
+        cursor: pointer;
+        transform: scale(0.98);
+    
+    } 
+    
+    .content{
+        color: white;
+        width: 50%;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        animation-name: p;
+        animation-duration: 3s;
+        margin-top: 0;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
+    @keyframes name{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    @keyframes p{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .sec-h22{
+        color: white;
+        width: 80%;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        animation-name: p;
+        animation-duration: 3s;
+        margin-top: 0;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
+    .h22{
+        color: white;
+        animation-name: h22;
+        animation-duration: 2s;
+    }
+    .sec1{
+        margin-top: 310px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        max-width: 900px;
+        height: 650px;
+        margin-bottom: 30px;
+        animation-name: sec;
+        animation-direction: 6s;
+    
+    }
+    @keyframes sec{
+        1%{
+            color: rgb(77, 42, 204);
+            border: 1px solid rgb(77, 42, 204);
+            margin-top: 310px;
+        }
+        100%{
+            color: white;
+            border: 1px solid rgb(255, 255, 255);
+            margin-top: 0;
+        }
+    }
+    @keyframes h22{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .cs22{
+        animation-name: cs;
+        animation-duration: 2s;
+        margin-top: 50px;
+    }
+    @keyframes cs{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .start{
+        width: 180px;
+        height: 45px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    .start:hover{
+        cursor: pointer;
+        transform: scale(0.98);
+    }
+    span{
+        letter-spacing: 2px;
+    }
+    .about{
+        background-color: black;
+        color: white;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(161, 137, 249);
+        border: 1px solid white;
+        border-radius: 15px;
+    }
+    .WhatsApp:hover{
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+    
+    .telegram:hover{
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+    .foter-name{
+        animation-name: name-foter;
+        animation-duration: 3s;
+        margin: auto;
+    }
+    @keyframes name-foter{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .youtube:hover{
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+    .contaner12{
+        margin-right: 200px;
+    }
+    
+}
+
+
+@media screen and (width: 500px) {
+    .bd{
+        background-image: linear-gradient(to left , white , rgb(77, 42, 204));
+        width: 500px;
+    }
+    
+    *{
+        scroll-behavior: smooth;
+    }
+    
+    .hed1{
+        background-color: transparent;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 80px;
+        padding: 10px;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+    a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size: 20px;}
+    .name-top{margin-right: 900px; margin-left: 30px; font-size: 20px; animation-name: name; animation-duration: 2s;}
+    .name-top:hover{color: rgb(255, 255, 255); transform: scale(0.96)}
+    .home{margin-right: 5px; font-size: 15px; color: rgb(106, 87, 177); animation-name: home; animation-duration: 3s;}
+    @keyframes home{
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(77, 42, 204);
+        }
+       
+    }
+    .contaner{
+        margin-top: 120px;
+        margin-left: 50px;
+    }
+    .up{color: rgb(106, 87, 177); margin-right: 600px; font-size: 15px; animation-name: up; animation-duration: 3s;}
+    @keyframes up{
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(106, 87, 177);
+        }
+    }
+    .in{color: rgb(106, 87, 177); font-size: 15px; animation-name: in; animation-duration: 3s;}
+    @keyframes in{
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(106, 87, 177);
+        }
+    }
+    .links{color: rgb(106, 87, 177); font-size: 15px; animation-name: links; animation-duration: 3s;}
+    @keyframes links {
+        1%{     color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(106, 87, 177);
+        }
+    }
+    .eff{
+        margin-left: 50px;
+        margin-bottom: 5px;
+        animation-name: eff;
+        animation-duration: 5s;
+        margin-top: 0;
+        padding: 0;
+    }
+    @keyframes eff{
+        1%{
+            margin-top: 145px;
+        }
+        100%{
+            margin-top: 0;
+        }
+    }
+    .bu11{
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        border-radius: 10px;
+        border: 1px solid;
+        margin-top: 5px;
+        width: 150px;
+        height: 50px;
+        margin-left: 120px;
+        animation-name: bu;
+        animation-duration: 3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .h2-button{
+        font-size: 20px;
+    }
+    @keyframes bu{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .bu11:hover{
+        cursor: pointer;
+        transform: scale(0.98);
+    
+    } 
+    
+    .content{
+        color: white;
+        width: 80%;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        animation-name: p;
+        animation-duration: 3s;
+        margin-top: 0;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
+    @keyframes name{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    @keyframes p{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .sec-h22{
+        color: white;
+        width: 150%;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        font-size: 15   px;
+        animation-name: p;
+        animation-duration: 3s;
+        margin-top: 0;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
+    .h22{
+        color: white;
+        animation-name: h22;
+        animation-duration: 2s;
+    }
+    .sec1{
+        margin-top: 310px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        max-width: 900px;
+        height: 650px;
+        margin-bottom: 30px;
+        animation-name: sec;
+        animation-direction: 6s;
+    
+    }
+    @keyframes sec{
+        1%{
+            color: rgb(77, 42, 204);
+            border: 1px solid rgb(77, 42, 204);
+            margin-top: 310px;
+        }
+        100%{
+            color: white;
+            border: 1px solid rgb(255, 255, 255);
+            margin-top: 0;
+        }
+    }
+    @keyframes h22{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .cs22{
+        animation-name: cs;
+        animation-duration: 2s;
+        margin-top: 50px;
+    }
+    @keyframes cs{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .start{
+        width: 180px;
+        height: 45px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    .start:hover{
+        cursor: pointer;
+        transform: scale(0.98);
+    }
+    span{
+        letter-spacing: 2px;
+    }
+    .about{
+        background-color: black;
+        color: white;
+        width: 600px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(161, 137, 249);
+        border: 1px solid white;
+        border-radius: 15px;
+    }
+    .WhatsApp:hover{
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+    
+    .telegram:hover{
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+    .foter-name{
+        margin-right: 200px;
+        animation-name: name-foter;
+        animation-duration: 3s;
+    }
+    @keyframes name-foter{
+        1%{
+            color: rgb(77, 42, 204);
+        }
+        100%{
+            color: white;
+        }
+    }
+    .youtube:hover{
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+    .contaner12{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}
