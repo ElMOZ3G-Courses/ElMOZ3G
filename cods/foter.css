@@ -10,6 +10,7 @@
     background-color: rgb(161, 137, 249);
     border: 1px solid white;
     border-radius: 15px;
+    display: none;
 }
 .WhatsApp:hover{
     cursor: pointer;
