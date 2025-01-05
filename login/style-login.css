@@ -32,6 +32,7 @@ body{
     justify-content: center;
     color: white;
     margin-top: 20px;
+    box-shadow: 0 0 30px rgba(136, 40, 226, 0.945);
 }
 .div-password{
     width: 600px;
@@ -43,6 +44,7 @@ body{
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    box-shadow: 0 0 30px rgba(136, 40, 226, 0.945);
 }
 .user{
     margin-top: 30px;
@@ -102,11 +104,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 30px rgba(136, 40, 226, 0.945);
 }
 .login:hover{
     cursor: pointer;
     transform: scale(0.98);
-    background-image: linear-gradient(to left , rgb(200, 167, 243) , rgb(109, 58, 204));
+    background-image: linear-gradient(to left , rgb(221, 206, 241) , rgb(109, 58, 204));
 }
 .signup{
     background-color: transparent;
@@ -120,6 +123,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    box-shadow: 0 0 30px rgba(136, 40, 226, 0.945);
 }
 .signup:hover{
     cursor: pointer;
@@ -127,4 +131,5 @@ body{
     background-color: transparent;
     border: rgb(109, 58, 204) 2px solid;
     color: rgb(109, 58, 204);
+    box-shadow: 0 0 10px rgba(136, 40, 226, 0.945);
 }
