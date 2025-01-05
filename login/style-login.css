@@ -12,7 +12,7 @@ body{
     justify-content: center;
     margin-top: 110px;
     background-color: rgba(114, 47, 223, 0.363);
-    box-shadow: 0 0 30px rgba(136, 40, 226, 0.945);
+    box-shadow: 0 0 20px rgba(136, 40, 226, 0.945);
     animation-name: con;
     animation-duration: 2s;
 }
@@ -32,7 +32,7 @@ body{
     justify-content: center;
     color: white;
     margin-top: 20px;
-    box-shadow: 0 0 30px rgba(136, 40, 226, 0.945);
+    box-shadow: 0 0 20px rgba(136, 40, 226, 0.945);
 }
 .div-password{
     width: 600px;
@@ -44,7 +44,7 @@ body{
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    box-shadow: 0 0 30px rgba(136, 40, 226, 0.945);
+    box-shadow: 0 0 20px rgba(136, 40, 226, 0.945);
 }
 .user{
     margin-top: 30px;
@@ -104,7 +104,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 30px rgba(136, 40, 226, 0.945);
+    box-shadow: 0 0 20px rgba(136, 40, 226, 0.945);
 }
 .login:hover{
     cursor: pointer;
@@ -123,7 +123,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    box-shadow: 0 0 30px rgba(136, 40, 226, 0.945);
+    box-shadow: 0 0 20px rgba(136, 40, 226, 0.945);
 }
 .signup:hover{
     cursor: pointer;
