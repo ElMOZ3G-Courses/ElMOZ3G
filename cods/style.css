@@ -1014,5 +1014,14 @@ span{
         flex-direction: row;
         justify-content: space-between;
     }
-    
+    body{
+        max-width: 500px;
+    }
+}
+ul{
+    display: flex;
+    flex-direction: row;
+}
+a{
+    font-size: 16px;
 }

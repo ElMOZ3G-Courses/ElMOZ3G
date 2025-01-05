@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-import{getAuth ,createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"
-import{getRealtime, setDoc, doc} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-Fiirestore.js"
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -23,40 +22,25 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-let signup = document.getElementById('signup')
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+const login = document.getElementById('login')
+const register = document.getElementById('signup')
 
-signup.onclick = function(event){
+register.addEventListener("click", function(event){
     event.preventDefault()
-    let email = document.getElementById('email').Value;
-    let password = document.getElementById('password').value;
-    let login = document.getElementById('login').value;
 
-    let auth = getAuth();
-    let db = getRealtime();
-
+    const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
+        // Signed up 
         const user = userCredential.user;
-        const userData = {
-            email: email,
-            password: password,
-        }
-        const docRef = doc(db, "users", user.uid);
-        setDoc(docRef, userData)
-        .then(() => {
-            console.log("user created")
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+        alert('creating account..')
+        // ...
     })
     .catch((error) => {
-        const erorrCode = erorr.code;
-        if(erorrCode == "auth/email-already-in-use"){
-            alert("Email already in use")
-        }
-        else{
-            alert("uneble")
-        }
-    })
-}
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+    });
+})
