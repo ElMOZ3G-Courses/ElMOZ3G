@@ -1028,3 +1028,11 @@ ul{
 a{
     font-size: 16px;
 }
+@media screen and (width: 720px) {
+    .h2-start{
+        margin-bottom: 20px;
+    }
+    .h2-start2{
+        margin-bottom: 20px;
+    }
+}
