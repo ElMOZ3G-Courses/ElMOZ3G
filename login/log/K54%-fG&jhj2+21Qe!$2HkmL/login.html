@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-login.css">
+    <link rel="icon" href="logo/El-Login.png">
+    <title>Login</title>
+</head>
+<body>
+
+    <center>
+        <div class="contaner">
+            <div class="eff">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/aa23f0e2-58eb-46ac-80d3-9829445a219f/f4daDGJ5UY.lottie" background="transparent" speed="1" style="width: 200px; height: 200px" loop autoplay></dotlottie-player>
+            </div>
+            <div class="div-h2">
+                <h1>Welcome Back</h1>
+            </div>
+            <div class="div-email">
+                <center>
+                    <input type="email" id="email" class="email" name="email" placeholder="Email">
+                    <img src="png/user.png" class="user" alt="user">
+
+                </center>
+            </div>
+            <div class="div-password">
+                <input type="password" id="password" name="password" class="pass" placeholder="Password">
+                <img src="png/pass.png" class="pass-img" alt="">
+            </div>
+            
+            <div class="div-login">
+                <button type="submit" class="login" id="login1">
+                    <h2>Login</h2>
+                </button>
+            </div>
+
+            <div class="or">
+                <h3 style="color: white;">______________________________or______________________________</h3>
+            </div>
+
+            <div class="div-signup">
+                <button type="submit" class="signup" click="event" id="signup">
+                    <h2>Create Account</h2>
+                </button>
+            </div>
+        </div>
+    </center>
+    <script type="module" src="Informations/firebase.js" defer></script>
+    <script src="script-login.js"></script>
+</body>
+</html>
