@@ -41,13 +41,13 @@ register.addEventListener("click", function(event){
     });
 });
 
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+import { getAuth2, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
 
 login1.addEventListener("click", function(event2){
     event2.preventDefault()
 
-    const auth2 = getAuth();
+    const auth2 = getAuth2();
     signInWithEmailAndPassword(auth2, email, password)
     .then((userCredential) => {
         // Signed up 
