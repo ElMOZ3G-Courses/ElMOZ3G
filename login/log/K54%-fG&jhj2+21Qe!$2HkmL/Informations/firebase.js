@@ -1,6 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
-
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
 const firebaseConfig = {
   apiKey: "AIzaSyBLUTgSq6AOMV4zjT68MqZixxCtpLTpzrs",
@@ -22,8 +21,16 @@ const password = document.getElementById('password').value;
 const login1 = document.getElementById('login1').value;
 const register = document.getElementById('signup').value;
 
+import { getDatabase, ref, set, get, child, } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+
+const db = getDatabase(app);
+
 register.addEventListener("click", function(event){
     event.preventDefault()
+    set(ref(db, 'user/' + document.getElementById('email').value),{
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value
+    });
 
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)

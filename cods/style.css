@@ -1036,3 +1036,21 @@ a{
         margin-bottom: 20px;
     }
 }
+@media screen and (width: 3000px) {
+    a{
+        font-size: 20px;
+    }
+    .up{
+        margin-right: 0px;
+    }
+    .h2-start{
+        margin-bottom: 20px;
+    }
+    .h2-start2{
+        margin-bottom: 20px;
+    }
+    .eff{
+        width: 300px;
+        height: 300px;
+    }
+}
