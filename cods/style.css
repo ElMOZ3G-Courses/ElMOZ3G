@@ -85,6 +85,7 @@ a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size:
     margin-left: 120px;
     animation-name: bu;
     animation-duration: 3s;
+    box-shadow: 0 0 16px rgba(138, 87, 185, 0.945);
 }
 @keyframes bu{
     1%{
@@ -195,7 +196,7 @@ a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size:
 }
 .start{
     width: 180px;
-    height: 45px;
+    height: 50px;
     background-color: transparent;
     border: 1px solid white;
     border-radius: 20px;
@@ -203,6 +204,7 @@ a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size:
     align-items: center;
     justify-content: center;
     color: white;
+    box-shadow: 0 0 16px rgba(138, 87, 185, 0.945);
 }
 .start:hover{
     cursor: pointer;
@@ -841,6 +843,7 @@ span{
         display: flex;
         align-items: center;
         justify-content: center;
+        box-shadow: 0 0 18px rgba(90, 29, 147, 0.945);
     }
     .h2-button{
         font-size: 20px;

@@ -24,8 +24,8 @@ const analytics = getAnalytics(app);
 
 const email = document.getElementById('email').value;
 const password = document.getElementById('password').value;
-const login1 = document.getElementById('login1')
-const register = document.getElementById('signup')
+const login1 = document.getElementById('login1').value;
+const register = document.getElementById('signup').value;
 
 register.addEventListener("click", function(event){
     event.preventDefault()
@@ -36,6 +36,28 @@ register.addEventListener("click", function(event){
         // Signed up 
         const user = userCredential.user;
         alert('creating account..')
+        window.location.href = "dashbord/dashbord.html"
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+    });
+});
+
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+login1.addEventListener("click", function(event2){
+    event2.preventDefault()
+
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        alert('loading...')
+        window.location.href = "dashbord/dashbord.html"
         // ...
     })
     .catch((error) => {
