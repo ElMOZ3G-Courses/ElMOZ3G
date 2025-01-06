@@ -26,6 +26,6 @@ learn.onclick = function(){
 }
 let start = document.getElementById('bu-start')
 start.onclick = function(){
-    setTimeout(function(){window.location.href = "login/login.html"},100);
+    setTimeout(function(){window.location.href = "login/log/K54%25-fG&jhj2+21Qe!$2HkmL/login.html"},100);
 }
 let header = document.querySelector('.hed1')
