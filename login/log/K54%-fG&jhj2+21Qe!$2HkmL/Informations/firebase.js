@@ -47,8 +47,8 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase
 login1.addEventListener("click", function(event2){
     event2.preventDefault()
 
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
+    const auth2 = getAuth();
+    signInWithEmailAndPassword(auth2, email, password)
     .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
