@@ -24,7 +24,7 @@ const analytics = getAnalytics(app);
 
 const email = document.getElementById('email').value;
 const password = document.getElementById('password').value;
-const login = document.getElementById('login')
+const login1 = document.getElementById('login1')
 const register = document.getElementById('signup')
 
 register.addEventListener("click", function(event){
@@ -43,4 +43,4 @@ register.addEventListener("click", function(event){
         const errorMessage = error.message;
         // ..
     });
-})
+});
