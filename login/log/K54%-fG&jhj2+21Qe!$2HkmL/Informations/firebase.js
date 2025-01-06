@@ -25,7 +25,7 @@ import { getDatabase, ref, set, get, child, } from "https://www.gstatic.com/fire
 
 const db = getDatabase(app);
 
-register.addEventListener("click", function(event){
+register.onclick = function(event){
     event.preventDefault()
     set(ref(db, 'user/' + document.getElementById('email').value),{
         email: document.getElementById('email').value,
@@ -46,12 +46,12 @@ register.addEventListener("click", function(event){
         const errorMessage = error.message;
         // ..
     });
-});
+}
 
 import { getAuth2, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
 
-login1.addEventListener("click", function(event2){
+login1.onclick = function(event2){
     event2.preventDefault()
 
     const auth2 = getAuth2();
@@ -68,4 +68,4 @@ login1.addEventListener("click", function(event2){
         const errorMessage = error.message;
         // ..
     });
-});
+}
