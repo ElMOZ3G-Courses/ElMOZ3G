@@ -106,28 +106,6 @@
             });
         }
 
-        import { getAuth2, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-
-        login1.onclick = function(event2){
-            event2.preventDefault()
-
-            const auth2 = getAuth2();
-            signInWithEmailAndPassword(auth2, email, password)
-            .then((userCredential) => {
-                // Signed up 
-                const user = userCredential.user;
-                alert('loading...')
-                window.location.href = "login/log/K54%25-fG&jhj2+21Qe!$2HkmL/Dash/main/Mr%2560154sBh-gd5&dC$12/dashbord.html"
-                // ...
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ..
-            });
-        }
-
     </script>
 </body>
 </html>  
