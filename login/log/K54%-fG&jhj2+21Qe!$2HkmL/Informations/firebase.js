@@ -1,6 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBLUTgSq6AOMV4zjT68MqZixxCtpLTpzrs",
   authDomain: "uplaod-web.firebaseapp.com",
@@ -15,57 +17,42 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
-const login1 = document.getElementById('login1').value;
-const register = document.getElementById('signup').value;
-
-import { getDatabase, ref, set, get, child, } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
-
+const auth = getAuth(app);
 const db = getDatabase(app);
 
-register.onclick = function(event){
-    event.preventDefault()
-    set(ref(db, 'user/' + document.getElementById('email').value),{
-        email: document.getElementById('email').value,
-        password: document.getElementById('password').value
-    });
+const register = document.getElementById('signup');
+const login1 = document.getElementById('login1');
 
-    const auth = getAuth();
+register.onclick = function(event){
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-        // Signed up 
         const user = userCredential.user;
-        alert('creating account..')
-        window.location.href = "login/log/K54%25-fG&jhj2+21Qe!$2HkmL/Dash/main/Mr%2560154sBh-gd5&dC$12/dashbord.html"
-        // ...
+        alert('Account created successfully!');
+        window.location.href = "dashboard.html"; // Simplified URL
     })
     .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
+        alert(errorMessage);
     });
 }
 
-import { getAuth2, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-
 login1.onclick = function(event2){
-    event2.preventDefault()
+    event2.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-    const auth2 = getAuth2();
-    signInWithEmailAndPassword(auth2, email, password)
+    signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-        // Signed up 
         const user = userCredential.user;
-        alert('loading...')
-        window.location.href = "login/log/K54%25-fG&jhj2+21Qe!$2HkmL/Dash/main/Mr%2560154sBh-gd5&dC$12/dashbord.html"
-        // ...
+        alert('Login successful!');
+        window.location.href = "dashboard.html"; // Simplified URL
     })
     .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
+        alert(errorMessage);
     });
 }

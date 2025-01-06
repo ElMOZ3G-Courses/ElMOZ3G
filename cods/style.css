@@ -99,9 +99,10 @@ a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size:
     cursor: pointer;
     transform: scale(0.98);
     background-image: linear-gradient(to right ,  rgb(114, 91, 196) , rgb(79, 49, 187));
-
+    box-shadow: 0 0 9px rgba(229, 224, 224, 0.945);
+    color: white;
+    transform: scaleZ(0.90);
 } 
-
 .content{
     color: white;
     width: 50%;

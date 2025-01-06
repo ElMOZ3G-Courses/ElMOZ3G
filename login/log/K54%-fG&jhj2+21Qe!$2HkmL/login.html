@@ -49,64 +49,10 @@
     </center>
 
 
-    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>  <!-- Include only once -->
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
 
     <script type="module" src="Informations/firebase.js" defer></script>
     <script src="script-login.js"></script>
-    <script type="module">
-
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-        const firebaseConfig = {
-        apiKey: "AIzaSyBLUTgSq6AOMV4zjT68MqZixxCtpLTpzrs",
-        authDomain: "uplaod-web.firebaseapp.com",
-        databaseURL: "https://uplaod-web-default-rtdb.firebaseio.com",
-        projectId: "uplaod-web",
-        storageBucket: "uplaod-web.appspot.com",
-        messagingSenderId: "458250812436",
-        appId: "1:458250812436:web:340df3066a4753d3f17b01",
-        measurementId: "G-35BEH0W9NS"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-
-        let email = document.getElementById('email').value;
-        let password = document.getElementById('password').value;
-        let login1 = document.getElementById('login1').value;
-        let register = document.getElementById('signup').value;
-
-        import { getDatabase, ref, set, get, child, } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
-
-        const db = getDatabase(app);
-
-        register.onclick = function(){
-
-            app.preventDefault()
-            set(ref(db, 'user/' + document.getElementById('email').value),{
-                email: document.getElementById('email').value,
-                password: document.getElementById('password').value
-            });
-
-            const auth = getAuth();
-            createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed up 
-                const user = userCredential.user;
-                alert('creating account..')
-                window.location.href = "login/log/K54%25-fG&jhj2+21Qe!$2HkmL/Dash/main/Mr%2560154sBh-gd5&dC$12/dashbord.html"
-                // ...
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ..
-            });
-        }
-
-    </script>
 </body>
 </html>  
