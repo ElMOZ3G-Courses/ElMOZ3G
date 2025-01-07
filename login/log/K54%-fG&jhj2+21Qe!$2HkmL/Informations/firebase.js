@@ -20,26 +20,29 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getDatabase(app);
 
-const register = document.getElementById('signup');
+const register = document.getElementById('create');
 const login1 = document.getElementById('login1');
 
 const popup = document.querySelector('.popup75')
+const popup25 = document.querySelector('.popup25')
 
 register.onclick = function(event) {
     event.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElementById('email-new').value;
+    const password = document.getElementById('password-new').value;
+    const username = document.getElementById('username').value;
 
-    popup.style.display = 'block'
+    popup25.style.display = 'block'
 
     setTimeout(function(){
-        createUserWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword(auth, email, password, username)
         .then((userCredential) => {
             const user = userCredential.user;
-            popup.style.display = 'none'
+            popup25.style.display = 'none'
 
             // Save user data to the database
             set(ref(db, 'users/' + user.uid), {
+                username: username,
                 email: email,
                 password: password,
                 createdAt: new Date().toISOString()
@@ -55,7 +58,7 @@ register.onclick = function(event) {
         .catch((error) => {
             alert("Registration error: " + error.message);
         });
-    },4000)
+    },3000)
 };
 
 login1.onclick = function(event2){
@@ -63,13 +66,18 @@ login1.onclick = function(event2){
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        const user = userCredential.user;
-        window.location.href = "Dash/main/Mr%2560154sBh-gd5&dC$12/dashbord.html"; // Simplified URL
-    })
-    .catch((error) => {
-        const errorMessage = error.message;
-        alert(errorMessage);
-    });
+    popup.style.display = "block"
+
+    setTimeout(function(){
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            window.location.href = "Dash/main/Mr%2560154sBh-gd5&dC$12/dashbord.html"; // Simplified URL
+            popup.style.display = "none"
+        })
+        .catch((error) => {
+            const errorMessage = error.message;
+            alert(errorMessage);
+        });
+    },4000)
 }

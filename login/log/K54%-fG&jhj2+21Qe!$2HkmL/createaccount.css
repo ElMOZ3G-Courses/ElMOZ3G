@@ -1,0 +1,139 @@
+/* Popup container */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 1000; /* Sit on top */
+}
+
+/* Popup content */
+.popup-content {
+    position: relative;
+    background-image: linear-gradient(to left , rgb(253, 252, 255) , rgb(95, 64, 207));
+    margin: 10% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Responsive width */
+    max-width: 800px; /* Maximum width */
+    border-radius: 10px;
+    height: 500px;
+    box-shadow: 0 0 20px rgba(136, 40, 226, 0.945);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+}
+
+.close:hover {
+    color: #000;
+    transform: scale(0.95);
+}
+
+.div-username{
+    width: 600px;
+    height: 55px;
+    border-radius: 15px;
+    border: white 2px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(136, 40, 226, 0.945);
+}
+.username{
+    height: 35px;
+    background-color: transparent;
+    border: white 1px solid;
+    width: 500px;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    size: 20px;
+    margin-right: 20px;
+}
+input::placeholder{
+    color: white;
+}
+.div-email-new{
+    width: 600px;
+    height: 55px;
+    border-radius: 15px;
+    border: white 2px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(136, 40, 226, 0.945);
+}
+.email-new{
+    height: 35px;
+    background-color: transparent;
+    border: white 1px solid;
+    width: 500px;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    size: 20px;
+    margin-right: 20px;
+}
+.div-password-new{
+    width: 600px;
+    height: 55px;
+    border-radius: 15px;
+    border: white 2px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(136, 40, 226, 0.945);
+}
+.pass-new{
+    height: 35px;
+    background-color: transparent;
+    border: white 1px solid;
+    width: 500px;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    size: 20px;
+    margin-right: 20px;
+}
+.div-create{margin-top: 15px;}
+.create{
+    width: 200px;
+    height: 55px;
+    font-size: 10px;
+    border: white 2px solid;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+}
+.create:hover{
+    transform: scale(0.98);
+    cursor: pointer;
+}
