@@ -1,0 +1,21 @@
+/* Popup container */
+.popup75 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 1000; /* Sit on top */
+}
+
+/* Popup content */
+.popup175 {
+    position: relative;
+    background-color: transparent;
+    margin: 10% auto; /* Centered */
+    padding: 20px;
+    width: 80%; /* Responsive width */
+    max-width: 500px; /* Maximum width */
+}

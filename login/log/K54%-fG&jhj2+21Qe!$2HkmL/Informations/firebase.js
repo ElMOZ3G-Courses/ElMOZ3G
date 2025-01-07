@@ -23,14 +23,22 @@ const db = getDatabase(app);
 const register = document.getElementById('signup');
 const login1 = document.getElementById('login1');
 
+const popup = document.querySelector('.popup75')
+
 register.onclick = function(event) {
     event.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    createUserWithEmailAndPassword(auth, email, password)
+    setTimeout(function(){
+        popup.style.display = 'block'
+    },3500)
+
+    setTimeout(function(){
+        createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
+            popup.style.display = 'none'
 
             // Save user data to the database
             set(ref(db, 'users/' + user.uid), {
@@ -49,6 +57,7 @@ register.onclick = function(event) {
         .catch((error) => {
             alert("Registration error: " + error.message);
         });
+    },4000)
 };
 
 login1.onclick = function(event2){
