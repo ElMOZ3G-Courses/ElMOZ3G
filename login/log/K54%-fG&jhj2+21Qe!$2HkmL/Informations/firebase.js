@@ -35,6 +35,7 @@ register.onclick = function(event) {
             // Save user data to the database
             set(ref(db, 'users/' + user.uid), {
                 email: email,
+                password: password,
                 createdAt: new Date().toISOString()
             })
             .then(() => {
