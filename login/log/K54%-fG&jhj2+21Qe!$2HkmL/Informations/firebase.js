@@ -30,11 +30,6 @@ register.onclick = function(event){
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    set(ref(db, 'user/' + document.getElementById('email').value),{
-        email: document.getElementById('email').value,
-        password: document.getElementById('password').value
-    });
-
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         const user = userCredential.user;
