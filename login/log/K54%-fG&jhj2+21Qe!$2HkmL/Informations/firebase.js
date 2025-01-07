@@ -23,8 +23,6 @@ const db = getDatabase(app);
 const register = document.getElementById('signup');
 const login1 = document.getElementById('login1');
 
-const successfull1 = document.getElementById('succ')
-
 register.onclick = function(event){
     event.preventDefault();
     const email = document.getElementById('email').value;
@@ -33,8 +31,6 @@ register.onclick = function(event){
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         const user = userCredential.user;
-        successfull1.style.display = "block"
-        setTimeout(function(){successfull1.style.display = "none"},3500);
         window.location.href = "Dash/main/Mr%2560154sBh-gd5&dC$12/dashbord.html"; // Simplified URL
     })
     .catch((error) => {
@@ -51,9 +47,6 @@ login1.onclick = function(event2){
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         const user = userCredential.user;
-        successfull1.innerHTML = 'Login successfull'
-        successfull1.style.display = "block"
-        setTimeout(function(){successfull1.style.display = "none"},3500);
         window.location.href = "Dash/main/Mr%2560154sBh-gd5&dC$12/dashbord.html"; // Simplified URL
     })
     .catch((error) => {
