@@ -23,21 +23,32 @@ const db = getDatabase(app);
 const register = document.getElementById('signup');
 const login1 = document.getElementById('login1');
 
-register.onclick = function(event){
+register.onclick = function(event) {
     event.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
     createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        const user = userCredential.user;
-        window.location.href = "Dash/main/Mr%2560154sBh-gd5&dC$12/dashbord.html"; // Simplified URL
-    })
-    .catch((error) => {
-        const errorMessage = error.message;
-        alert(errorMessage);
-    });
-}
+        .then((userCredential) => {
+            const user = userCredential.user;
+
+            // Save user data to the database
+            set(ref(db, 'users/' + user.uid), {
+                email: email,
+                createdAt: new Date().toISOString()
+            })
+            .then(() => {
+                alert("User  registered and data saved successfully!");
+                window.location.href = "Dash/main/Mr%2560154sBh-gd5&dC$12/dashbord.html";
+            })
+            .catch((error) => {
+                alert("Error saving user data: " + error.message);
+            });
+        })
+        .catch((error) => {
+            alert("Registration error: " + error.message);
+        });
+};
 
 login1.onclick = function(event2){
     event2.preventDefault();
