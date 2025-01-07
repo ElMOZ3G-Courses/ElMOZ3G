@@ -29,6 +29,7 @@ a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size:
 .up{color: rgb(106, 87, 177); animation-name: up; animation-duration: 3s;}
 .up:hover{
     color: rgb(76, 27, 253);
+    transform: translate3d(0,-3px,.01px)
 }
 @keyframes up{
     1%{     color: rgb(255, 255, 255);
@@ -40,6 +41,7 @@ a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size:
 .in{color: rgb(106, 87, 177); animation-name: in; animation-duration: 3s;}
 .in:hover{
     color: rgb(76, 27, 253);
+    transform: translate3d(0,-3px,.01px)
 }
 @keyframes in{
     1%{     color: rgb(255, 255, 255);
@@ -51,6 +53,7 @@ a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size:
 .links{color: rgb(106, 87, 177); margin-left: 900px; animation-name: links; animation-duration: 3s;}
 .links:hover{
     color: rgb(76, 27, 253);
+    transform: translate3d(0,-3px,.01px)
 }
 @keyframes links {
     1%{     color: rgb(255, 255, 255);
@@ -101,7 +104,7 @@ a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size:
     background-image: linear-gradient(to right ,  rgb(114, 91, 196) , rgb(79, 49, 187));
     box-shadow: 0 0 9px rgba(229, 224, 224, 0.945);
     color: white;
-    transform: scaleZ(0.90);
+    transform: translate3d(0,-3px,.01px)
 } 
 .content{
     color: white;

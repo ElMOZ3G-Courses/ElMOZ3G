@@ -14,7 +14,7 @@
 .popup-content {
     position: relative;
     background-image: linear-gradient(to left , rgb(253, 252, 255) , rgb(95, 64, 207));
-    margin: 10% auto; /* Centered */
+    margin: 5% auto; /* Centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Responsive width */

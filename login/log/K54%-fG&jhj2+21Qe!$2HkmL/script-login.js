@@ -4,7 +4,8 @@ const signup1 = document.getElementById('signup')
 const popup55 = document.querySelector('.popup')
 const exit = document.querySelector('.close')
 
-signup1.onclick = function(){
+
+signup1.onclick = function() {
     popup55.style.display = 'block'
 }
 
