@@ -30,9 +30,7 @@ register.onclick = function(event) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    setTimeout(function(){
-        popup.style.display = 'block'
-    },3500)
+    popup.style.display = 'block'
 
     setTimeout(function(){
         createUserWithEmailAndPassword(auth, email, password)
