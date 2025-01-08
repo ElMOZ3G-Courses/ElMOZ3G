@@ -40,6 +40,12 @@ register.onclick = function(event) {
         popup25.style.display = 'block'
     },2000)
 
+    const auth = getAuth();
+    sendEmailVerification(auth.currentUser)
+    .then(() => {
+        window.alert('done send your email')
+    });
+
     setTimeout(function(){
         createUserWithEmailAndPassword(auth, email, password, username)
         .then((userCredential) => {

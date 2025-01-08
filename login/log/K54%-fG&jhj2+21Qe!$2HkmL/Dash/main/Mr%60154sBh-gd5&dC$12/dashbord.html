@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="script/dash-style.css">
 </head>
 <body>
-    <!-- Dashboard Container -->
     <div class="dashboard-container">
-        <!-- Header -->
         <header class="header">
             <h1>Home</h1>
             <div class="user-profile">
@@ -18,7 +16,6 @@
             </div>
         </header>
 
-        <!-- Sidebar -->
         <aside class="sidebar">
             <nav>
                 <ul>
@@ -30,7 +27,6 @@
             </nav>
         </aside>
 
-        <!-- Main Content -->
         <main class="main-content">
             <div class="cards">
                 <div class="card">
@@ -38,16 +34,15 @@
                     <p>1,234</p>
                 </div>
                 <div class="card">
-                    <h2>Revenue</h2>
+                    <h2>Actual prices of courses</h2>
                     <p>$12,345</p>
                 </div>
                 <div class="card">
-                    <h2 >Active Projects</h2>
+                    <h2 >Number of courses</h2>
                     <p>15</p>
                 </div>
             </div>
 
-            <!-- Chart Placeholder -->
             <div class="chart">
                 <h2 class="profileSection" id="name"></h2>
                 <h2 class="profileSection" id ="email"></h2>
@@ -58,12 +53,10 @@
         </main>
     </div>
 
-    <!-- Firebase App and Database SDK -->
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
 
-    <!-- JavaScript for Chart -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script/script.js"></script>
     <script type="module" src="script/firebase.js"></script>
@@ -129,6 +122,10 @@
         // this value to authenticate with your backend server, if
         // you have one. Use User.getToken() instead.
         const uid = uidd.uid;
+        uname.innerHTML = displayName,
+        email.innerHTML = email,
+        vemail.innerHTML = emailVerified,
+        uidd.innerHTML = uid
         }
     </script>
 </body>

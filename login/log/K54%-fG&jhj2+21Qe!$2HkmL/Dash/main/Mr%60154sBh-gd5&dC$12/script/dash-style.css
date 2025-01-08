@@ -82,12 +82,15 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-bottom: 20px;
+    box-shadow: 0 0px 13px rgba(111, 22, 229, 0.829);
 }
 
 .card {
-    background-color: #fff;
+    background-color: transparent;
     padding: 20px;
-    border-radius: 8px
+    border-radius: 8px;
+    border: white 2px solid;
+    
 } 
 .card:hover{
     transform: translate3d(0,-3px,.01px);
