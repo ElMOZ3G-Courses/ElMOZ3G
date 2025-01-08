@@ -106,6 +106,15 @@
                 console.log("User   is not logged in.");
             }
         });
+
+        import { getAuth } from "firebase/auth";
+
+        const auth = getAuth();
+        const user = auth.currentUser;
+        if (user !== null) {
+        // The user object has basic properties such as display name, email, etc.
+            const displayName = usernameSpan.displayName;
+        }
     </script>
 </body>
 </html>
