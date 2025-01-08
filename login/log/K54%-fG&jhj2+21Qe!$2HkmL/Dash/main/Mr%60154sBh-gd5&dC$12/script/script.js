@@ -38,3 +38,24 @@ firebase.auth().onAuthStateChanged((user) => {
         console.log("User   is not logged in.");
     }
 });
+
+const uname = document.getElementById('name')
+const email = document.getElementById('email')
+const vemail = document.getElementById('emailVerified')
+const uidd = document.getElementById('uid')
+
+import { getAuth3 } from "firebase/auth";
+
+const auth = getAuth3();
+const user = auth.currentUser;
+if (user !== null) {
+  // The user object has basic properties such as display name, email, etc.
+  const displayName = uname.displayName;
+  const email = email.email;
+  const emailVerified = vemail.emailVerified;
+
+  // The user's ID, unique to the Firebase project. Do NOT use
+  // this value to authenticate with your backend server, if
+  // you have one. Use User.getToken() instead.
+  const uid = uidd.uid;
+}

@@ -42,14 +42,17 @@
                     <p>$12,345</p>
                 </div>
                 <div class="card">
-                    <h2>Active Projects</h2>
+                    <h2 >Active Projects</h2>
                     <p>15</p>
                 </div>
             </div>
 
             <!-- Chart Placeholder -->
             <div class="chart">
-                <h2 class="profileSection">Monthly Performance</h2>
+                <h2 class="profileSection" id="name"></h2>
+                <h2 class="profileSection" id ="email"></h2>
+                <h2 class="profileSection" id = "emailVerified"></h2>
+                <h2 class="profileSection" id="uid"></h2>
                 <canvas id="myChart"></canvas>
             </div>
         </main>
@@ -107,13 +110,25 @@
             }
         });
 
-        import { getAuth } from "firebase/auth";
+        const uname = document.getElementById('name')
+        const email = document.getElementById('email')
+        const vemail = document.getElementById('emailVerified')
+        const uidd = document.getElementById('uid')
 
-        const auth = getAuth();
+        import { getAuth3 } from "firebase/auth";
+
+        const auth = getAuth3();
         const user = auth.currentUser;
         if (user !== null) {
         // The user object has basic properties such as display name, email, etc.
-            const displayName = usernameSpan.displayName;
+        const displayName = uname.displayName;
+        const email = email.email;
+        const emailVerified = vemail.emailVerified;
+
+        // The user's ID, unique to the Firebase project. Do NOT use
+        // this value to authenticate with your backend server, if
+        // you have one. Use User.getToken() instead.
+        const uid = uidd.uid;
         }
     </script>
 </body>
