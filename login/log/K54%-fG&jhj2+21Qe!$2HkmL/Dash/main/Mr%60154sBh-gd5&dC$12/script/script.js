@@ -58,4 +58,8 @@ if (user !== null) {
   // this value to authenticate with your backend server, if
   // you have one. Use User.getToken() instead.
   const uid = uidd.uid;
+  uname.innerHTML = displayName,
+  email.innerHTML = email,
+  vemail.innerHTML = emailVerified,
+  uidd.innerHTML = uid
 }
