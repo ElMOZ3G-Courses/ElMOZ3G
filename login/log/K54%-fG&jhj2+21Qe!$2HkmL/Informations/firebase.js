@@ -13,8 +13,6 @@ const firebaseConfig = {
   appId: "1:458250812436:web:340df3066a4753d3f17b01",
   measurementId: "G-35BEH0W9NS"
 };
-
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
@@ -40,11 +38,9 @@ register.onclick = function(event) {
         popup25.style.display = 'block'
     },2000)
 
-    const auth = getAuth();
-    sendEmailVerification(auth.currentUser)
-    .then(() => {
-        window.alert('done send your email')
-    });
+    setTimeout(function(){
+        popup25.style.display = 'none'
+    },4000)
 
     setTimeout(function(){
         createUserWithEmailAndPassword(auth, email, password, username)
@@ -52,7 +48,6 @@ register.onclick = function(event) {
             const user = userCredential.user;
             popup25.style.display = 'none'
 
-            // Save user data to the database
             set(ref(db, 'users/' + user.uid), {
                 username: username,
                 email: email,
