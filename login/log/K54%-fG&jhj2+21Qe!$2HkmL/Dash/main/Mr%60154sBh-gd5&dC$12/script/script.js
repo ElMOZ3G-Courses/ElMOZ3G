@@ -17,9 +17,9 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getDatabase(app);
 
-auth.onAuthStateChanged((user) => {
+// Check if the user is logged in
+firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        // User is signed in
         const userId = user.uid;
 
         // Fetch user data from the database
@@ -27,15 +27,14 @@ auth.onAuthStateChanged((user) => {
             .then((snapshot) => {
                 const userData = snapshot.val();
 
-                // Display user data in the profile section
-                const profileSection = document.querySelector('.profileSection');
-                profileSection.innerHTML = userData.username;
+                // Display the username in the <span> element
+                const usernameSpan = document.getElementById('username');
+                usernameSpan.textContent = userData.username; // Update the span with the username
             })
             .catch((error) => {
                 console.error("Error fetching user data:", error);
             });
     } else {
-        // User is signed out
-        console.log("User  is not logged in.");
+        console.log("User   is not logged in.");
     }
 });

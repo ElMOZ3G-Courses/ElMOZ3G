@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-image: linear-gradient(to left , white , rgb(77, 42, 204));
     color: #333;
 }
 
@@ -22,8 +22,10 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: white 2px solid;
+    color: white;
 }
 
 .header h1 {
@@ -43,9 +45,10 @@ body {
 
 /* Sidebar */
 .sidebar {
-    background-color: #2c3e50;
-    color: #fff;
+    background-image: linear-gradient(to top , rgb(174, 158, 232) , rgb(77, 42, 204));
+    color: rgb(93, 39, 230);
     padding: 20px;
+    border: white 2px solid;
 }
 
 .sidebar nav ul {
@@ -66,13 +69,12 @@ body {
 
 .sidebar nav ul li a.active {
     font-weight: bold;
-    color: #1abc9c;
+    color: #711def;
 }
 
 /* Main Content */
 .main-content {
     padding: 20px;
-    background-color: #f4f4f9;
 }
 
 .cards {
@@ -86,4 +88,8 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px
-}    
+} 
+.card:hover{
+    transform: translate3d(0,-3px,.01px);
+    cursor: pointer;
+}   
