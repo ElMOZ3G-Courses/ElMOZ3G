@@ -3,12 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
     <link rel="stylesheet" href="script/dash-style.css">
-    <link rel="icon" href="png/ElMOZ3G.png">
-    <title>Home</title>
 </head>
 <body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Dashboard</h1>
+            <div class="user-profile">
+                <span>John Doe</span>
+                <img src="https://via.placeholder.com/40" alt="User  Profile">
+            </div>
+        </header>
 
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="cards">
+                <div class="card">
+                    <h2>Total Users</h2>
+                    <p>1,234</p>
+                </div>
+                <div class="card">
+                    <h2>Revenue</h2>
+                    <p>$12,345</p>
+                </div>
+                <div class="card">
+                    <h2>Active Projects</h2>
+                    <p>15</p>
+                </div>
+            </div>
+
+            <!-- Chart Placeholder -->
+            <div class="chart">
+                <h2 class="profileSection">Monthly Performance</h2>
+                <canvas id="myChart"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebase App and Database SDK -->
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
+
+    <!-- JavaScript for Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script/script.js"></script>
 </body>
 </html>
