@@ -28,11 +28,8 @@ auth.onAuthStateChanged((user) => {
                 const userData = snapshot.val();
 
                 // Display user data in the profile section
-                const profileSection = document.querySelector('.user-profile');
-                profileSection.innerHTML = `
-                    <span>${userData.username}</span>
-                    <img src="https://via.placeholder.com/40" alt="User   Profile">
-                `;
+                const profileSection = document.querySelector('.profileSection');
+                profileSection.innerHTML = userData.username;
             })
             .catch((error) => {
                 console.error("Error fetching user data:", error);
