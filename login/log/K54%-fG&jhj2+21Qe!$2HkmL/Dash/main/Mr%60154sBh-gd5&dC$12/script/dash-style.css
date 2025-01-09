@@ -103,7 +103,7 @@ body {
     border: white 2px solid;
     animation-name: cards1;
     animation-duration: 2s;
-    color: black;
+    color: white;
 } 
 
 @keyframes cards1{
@@ -111,7 +111,7 @@ body {
         color: rgb(116, 81, 243);
     }
     100%{
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
     }
 }
 
@@ -122,7 +122,7 @@ body {
     border: white 2px solid;
     animation-name: cards22;
     animation-duration: 2s;
-    color: black;
+    color: white;
 } 
 
 @keyframes cards22{
@@ -130,7 +130,7 @@ body {
         color: rgb(163, 142, 240);
     }
     100%{
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
     }
 }
 
@@ -141,15 +141,15 @@ body {
     border: white 2px solid;
     animation-name: cards33;
     animation-duration: 2s;
-    color: black;
+    color: white;
 } 
 
 @keyframes cards33{
     1%{
-        color: rgb(208, 196, 251);
+        color: rgb(196, 163, 233);
     }
     100%{
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
     }
 }
 .popup30 {
@@ -295,6 +295,7 @@ input::placeholder{
     justify-content: center;
     box-shadow: 0 0 18px rgba(90, 29, 147, 0.945);
     margin-left: 60px;
+    color: white;
 }
 .con-html:hover{
     cursor: pointer;
@@ -311,6 +312,7 @@ input::placeholder{
     justify-content: center;
     box-shadow: 0 0 18px rgba(90, 29, 147, 0.945);
     margin-left: 90px;
+    color: white;
 }
 .con-css:hover{
     cursor: pointer;
@@ -334,6 +336,80 @@ input::placeholder{
         background-color: transparent;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         border: white 2px solid;
+        color: white;
+    }
+}
+.popup-html {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 1000; /* Sit on top */
+}
+.popup-html-video {
+    position: relative;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: white;
+}
+.popup-video{
+    background-image: linear-gradient(to top , rgba(174, 158, 232, 0.695) , rgba(77, 42, 204, 0.656));
+    width: 800px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    border: white 2px solid;
+    box-shadow: 0 0 18px rgba(90, 29, 147, 0.945);
+}
+.close-icon {
+    position: absolute;
+    right: 45px;
+    top: 35px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-icon:hover {
+    color: #000;
+    transform: scale(0.95);
+}
+h2{
+    animation-name: html;
+    animation-duration: 3s;
+}
+@keyframes html{
+    1%{
+        color: rgb(107, 73, 231);
+    }
+    100%{
+        color: white;
+    }
+}
+
+h4{
+    animation-name: h4;
+    animation-duration: 3s;
+}
+@keyframes h4{
+    1%{
+        color: rgb(77, 42, 204);
+    }
+    100%{
         color: white;
     }
 }

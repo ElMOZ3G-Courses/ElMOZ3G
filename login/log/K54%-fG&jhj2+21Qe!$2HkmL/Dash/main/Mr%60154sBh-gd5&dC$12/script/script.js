@@ -70,11 +70,11 @@ firebase.auth().onAuthStateChanged((user) => {
     }
 });
 
-const report1 = document.getElementById('report-1')
-const poppup30 = document.getElementById('popup30')
-const closere = document.getElementById('close-re')
-const btnreport = document.getElementById('report-btn')
-const popup99 = document.querySelector('.popup99')
+let report1 = document.getElementById('report-1')
+let poppup30 = document.getElementById('popup30')
+let closere = document.getElementById('close-re')
+let btnreport = document.getElementById('report-btn')
+let popup99 = document.querySelector('.popup99')
 report1.onclick = function(){
     poppup30.style.display = 'block'
 }
@@ -87,4 +87,13 @@ btnreport.onclick = function(){
     setTimeout(function(){
         popup99.style.display = 'none'
     },3500)
+}
+let popupcontaner1 = document.querySelector('.contaner-1')
+let html = document.querySelector('.popup-html')
+let closehtml = document.querySelector('.close-icon')
+popupcontaner1.onclick = function(){
+    html.style.display = 'block'
+}
+closehtml.onclick = function(){
+    html.style.display = 'none'
 }

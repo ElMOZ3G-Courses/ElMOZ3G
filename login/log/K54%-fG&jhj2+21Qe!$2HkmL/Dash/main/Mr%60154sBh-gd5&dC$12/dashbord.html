@@ -47,11 +47,11 @@
                                 <img class="img-html" src="https://firebasestorage.googleapis.com/v0/b/uplaod-web.appspot.com/o/img-courses%2Fcourse-html.jpg?alt=media&token=db6d2bfc-f9e3-4824-aa4f-f6ce1123d9fe" alt="Course Image">
                             </div>
                             <div class="title-course-html">
-                                <h2>Course HTML</h2>
+                                <h2 class="h2-html">Course HTML</h2>
                                 <h4>for Free</h4>
                             </div>
                         </div>
-                        
+
                         <div class="con-css">
                             <div class="div-img-course-css">
                                 <img class="img-css" src="https://firebasestorage.googleapis.com/v0/b/uplaod-web.appspot.com/o/img-courses%2Fcourse-css.jpg?alt=media&token=a40c681e-27a4-43ad-8b6d-5f4b1b0516bf" alt="Course Image">
@@ -59,6 +59,25 @@
                             <div class="title-course-css">
                                 <h2>Course CSS</h2>
                                 <h4>for Free</h4>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+                <center>
+                    <div>
+                        <div>
+                            <div>
+                                <div class="popup-html">
+                                    <div class="popup-html-video">
+                                        <div class="popup-video">
+                                            <header>
+                                                <img class="close-icon" src="https://firebasestorage.googleapis.com/v0/b/uplaod-web.appspot.com/o/icons%2Fclose-course.png?alt=media&token=f27ff95e-b67a-4e99-bcb5-71f3366b4e94" alt="close-icon">
+                                            </header>
+                                            <h2>HTML Course by Abdulrahman Gamal</h2>
+                                            <video src="https://rr3---sn-25glenld.googlevideo.com/videoplayback?expire=1736458766&ei=ru1_Z4b7K-yHkucPh5CM-A8&ip=45.196.52.176&id=o-AJQzq6tntzn8LB5BYhJ2Oszm1qpvpm3OaMd0PGhpcifl&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AfMhrI9MIXRfvAYuY5oqggWaekMjK8NYbCl9taEWWuhsQKS_nl1WgcIhQEhp-KcxznvILPpQGkJ8QgfK&spc=x-caUHZRZCbS5QNfKkOjJA-SW-uvoU0L8uNbMX6qmONPuBw4rViGYJqVKPGE&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=356792022&ratebypass=yes&dur=17534.664&lmt=1700975895610662&fexp=24350590,24350737,24350827,24350851,24350975,51326932,51335594,51353497,51371294&c=ANDROID&txp=5438434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRgIhAJaixqSBGnzyd96CaCFaiikj4Ed2b0o77nlMyc0E6cD6AiEAspFvVXvAL8ycUUCmZJrHO11iHOY9TBNisTt_exujRvE%3D&rm=sn-p5qees7z&rrc=104,80&req_id=cfe4964c4f88a3ee&ipbypass=yes&redirect_counter=2&cm2rm=sn-uxaxjvhxbt2u-5atek7l&cms_redirect=yes&cmsv=e&met=1736437181,&mh=oz&mip=197.63.113.74&mm=29&mn=sn-25glenld&ms=rdu&mt=1736436562&mv=m&mvi=3&pl=20&rms=rdu,au&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=AGluJ3MwRgIhAJFP5mWeqpPmmZiBqZFofu94QfoWIZBMetxqjpedawO_AiEAnduLRtFbgZn5vyVhTafQMDBCJxPqaQ3-vjIRyxPUj0Y%3D" controls></video>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -114,7 +133,109 @@
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script/script.js"></script>
-    <script type="module" src="script/firebase.js"></script>
+    <script type="module" src="script/script.js"></script>
+
+    <script>
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+
+        const firebaseConfig = {
+        apiKey: "AIzaSyBLUTgSq6AOMV4zjT68MqZixxCtpLTpzrs",
+        authDomain: "uplaod-web.firebaseapp.com",
+        databaseURL: "https://uplaod-web-default-rtdb.firebaseio.com",
+        projectId: "uplaod-web",
+        storageBucket: "uplaod-web.appspot.com",
+        messagingSenderId: "458250812436",
+        appId: "1:458250812436:web:340df3066a4753d3f17b01",
+        measurementId: "G-35BEH0W9NS"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase(app);
+
+        const uname = document.getElementById('name')
+        const email = document.getElementById('email')
+        const vemail = document.getElementById('emailVerified')
+        const uidd = document.getElementById('uid')
+
+        // Check if the user is logged in
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                const userId = user.uid;
+
+                // Fetch user data from the database
+                firebase.database().ref('users/' + userId).once('value')
+                    .then((snapshot) => {
+                        const userData = snapshot.val();
+
+                        // Display the username in the <span> element
+                        const usernameSpan = document.getElementById('username');
+                        usernameSpan.textContent = userData.username; // Update the span with the username
+                    })
+                    .catch((error) => {
+                        console.error("Error fetching user data:", error);
+                    });
+            } else {
+                console.log("User  is not logged in.");
+            }
+        });
+
+        import { getAuth3 } from "firebase/auth";
+
+        const auth = getAuth3();
+        const user = auth.currentUser;
+        // Check if the user is logged in
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                const userId = user.uid;
+
+                // Fetch user data from the database
+                firebase.database().ref('users/' + userId).once('value')
+                    .then((snapshot) => {
+                        const userData = snapshot.val();
+
+                        // Display the username in the <span> element
+                        const usernameSpan = document.getElementById('username');
+                        usernameSpan.textContent = userData.username; // Update the span with the username
+                    })
+                    .catch((error) => {
+                        console.error("Error fetching user data:", error);
+                    });
+            } else {
+                console.log("User    is not logged in.");
+            }
+        });
+
+        let report1 = document.getElementById('report-1')
+        let poppup30 = document.getElementById('popup30')
+        let closere = document.getElementById('close-re')
+        let btnreport = document.getElementById('report-btn')
+        let popup99 = document.querySelector('.popup99')
+        report1.onclick = function(){
+            poppup30.style.display = 'block'
+        }
+        closere.onclick = function(){
+            poppup30.style.display = 'none'
+        }
+        btnreport.onclick = function(){
+            poppup30.style.display = 'none'
+            popup99.style.display = 'block'
+            setTimeout(function(){
+                popup99.style.display = 'none'
+            },3500)
+        }
+        let popupcontaner1 = document.querySelector('.contaner-1')
+        let html = document.querySelector('.popup-html')
+        let closehtml = document.querySelector('.close-icon')
+        popupcontaner1.onclick = function(){
+            html.style.display = 'block'
+        }
+        closehtml.onclick = function(){
+            html.style.display = 'none'
+        }
+
+    </script>
 </body>
 </html>
