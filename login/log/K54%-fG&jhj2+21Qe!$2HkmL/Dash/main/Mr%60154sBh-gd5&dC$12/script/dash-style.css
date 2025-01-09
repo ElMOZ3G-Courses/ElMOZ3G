@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to left , white , rgb(77, 42, 204));
-    color: #333;
+    color: black;
 }
 
 /* Dashboard Container */
@@ -152,11 +152,6 @@ body {
         color: rgb(0, 0, 0);
     }
 }
-
-.card:hover{
-    transform: translate3d(0,-3px,.01px);
-    cursor: pointer;
-}
 .popup30 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -281,6 +276,64 @@ input::placeholder{
         color: rgb(77, 42, 204);
     }
     100%{
+        color: white;
+    }
+}
+.contaner-1{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.con-html{
+    display: flex;
+    width: 500px;
+    height: 300px;
+    border: white 2px solid;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 18px rgba(90, 29, 147, 0.945);
+    margin-left: 60px;
+}
+.con-html:hover{
+    cursor: pointer;
+    transform: translate3d(0,-3px,.01px);
+}
+.con-css{
+    display: flex;
+    width: 500px;
+    height: 300px;
+    border: white 2px solid;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 18px rgba(90, 29, 147, 0.945);
+    margin-left: 90px;
+}
+.con-css:hover{
+    cursor: pointer;
+    transform: translate3d(0,-3px,.01px);
+}
+
+@media screen and (max-width: 950px) {
+    .contaner-1, .con-html, .con-css, .cards {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    .header{
+        width: 500px;
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: transparent;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: white 2px solid;
         color: white;
     }
 }

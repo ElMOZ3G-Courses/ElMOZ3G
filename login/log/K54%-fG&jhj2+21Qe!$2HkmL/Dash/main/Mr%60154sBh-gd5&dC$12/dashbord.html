@@ -13,7 +13,7 @@
         <header class="header">
             <h1 class="home-top">Home</h1>
             <div class="user-profile">
-                <span style="color: rgb(93, 39, 230);" class="span-name" id="username">John Doe</span>
+                <span style="color: rgb(93, 39, 230);" class="span-name" id="username"></span>
                 <img src="png/profile.png" alt="User  Profile">
             </div>
         </header>
@@ -21,8 +21,6 @@
         <aside class="sidebar">
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#" class="active">Analytics</a></li>
                     <li><a style="cursor: pointer;" class="active" id="report-1">Report</a></li>
                     <li><a href="#" class="active">Settings</a></li>
                 </ul>
@@ -33,24 +31,38 @@
             <div class="cards">
                 <div class="card">
                     <h2>Total Users</h2>
-                    <p>1,234</p>
-                </div>
-                <div class="card2">
-                    <h2>Actual prices of courses</h2>
-                    <p>$12,345</p>
+                    <p>1</p>
                 </div>
                 <div class="card3">
                     <h2 >Number of courses</h2>
-                    <p>15</p>
+                    <p>2</p>
                 </div>
             </div>
 
             <div class="chart">
-                <h2 class="profileSection" id="name"></h2>
-                <h2 class="profileSection" id ="email"></h2>
-                <h2 class="profileSection" id = "emailVerified"></h2>
-                <h2 class="profileSection" id="uid"></h2>
-                <canvas id="myChart"></canvas>
+                <center>
+                    <div class="contaner-1">
+                        <div class="con-html">
+                            <div class="div-img-course-html">
+                                <img class="img-html" src="https://firebasestorage.googleapis.com/v0/b/uplaod-web.appspot.com/o/img-courses%2Fcourse-html.jpg?alt=media&token=db6d2bfc-f9e3-4824-aa4f-f6ce1123d9fe" alt="Course Image">
+                            </div>
+                            <div class="title-course-html">
+                                <h2>Course HTML</h2>
+                                <h4>for Free</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="con-css">
+                            <div class="div-img-course-css">
+                                <img class="img-css" src="https://firebasestorage.googleapis.com/v0/b/uplaod-web.appspot.com/o/img-courses%2Fcourse-css.jpg?alt=media&token=a40c681e-27a4-43ad-8b6d-5f4b1b0516bf" alt="Course Image">
+                            </div>
+                            <div class="title-course-css">
+                                <h2>Course CSS</h2>
+                                <h4>for Free</h4>
+                            </div>
+                        </div>
+                    </div>
+                </center>
             </div>
         </main>
     </div>
@@ -101,102 +113,8 @@
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script/script.js"></script>
     <script type="module" src="script/firebase.js"></script>
-
-    <script>
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
-
-        const firebaseConfig = {
-        apiKey: "AIzaSyBLUTgSq6AOMV4zjT68MqZixxCtpLTpzrs",
-        authDomain: "uplaod-web.firebaseapp.com",
-        databaseURL: "https://uplaod-web-default-rtdb.firebaseio.com",
-        projectId: "uplaod-web",
-        storageBucket: "uplaod-web.appspot.com",
-        messagingSenderId: "458250812436",
-        appId: "1:458250812436:web:340df3066a4753d3f17b01",
-        measurementId: "G-35BEH0W9NS"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const db = getDatabase(app);
-
-        // Check if the user is logged in
-        firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-                const userId = user.uid;
-
-                // Fetch user data from the database
-                firebase.database().ref('users/' + userId).once('value')
-                    .then((snapshot) => {
-                        const userData = snapshot.val();
-
-                        // Display the username in the <span> element
-                        const usernameSpan = document.getElementById('username');
-                        usernameSpan.textContent = userData.username; // Update the span with the username
-                    })
-                    .catch((error) => {
-                        console.error("Error fetching user data:", error);
-                    });
-            } else {
-                console.log("User   is not logged in.");
-            }
-        });
-
-        const uname = document.getElementById('name')
-        const email = document.getElementById('email')
-        const vemail = document.getElementById('emailVerified')
-        const uidd = document.getElementById('uid')
-
-        import { getAuth3 } from "firebase/auth";
-
-        const auth = getAuth3();
-        const user = auth.currentUser;
-        // Check if the user is logged in
-        firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-                const userId = user.uid;
-
-                // Fetch user data from the database
-                firebase.database().ref('users/' + userId).once('value')
-                    .then((snapshot) => {
-                        const userData = snapshot.val();
-
-                        // Display the username in the <span> element
-                        const usernameSpan = document.getElementById('username');
-                        usernameSpan.textContent = userData.username; // Update the span with the username
-                    })
-                    .catch((error) => {
-                        console.error("Error fetching user data:", error);
-                    });
-            } else {
-                console.log("User    is not logged in.");
-            }
-        });
-
-        const report1 = document.getElementById('report-1')
-        const poppup30 = document.getElementById('popup30')
-        const closere = document.getElementById('close-re')
-        const btnreport = document.getElementById('report-btn')
-        const popup99 = document.querySelector('.popup99')
-        report1.onclick = function(){
-            poppup30.style.display = 'block'
-        }
-        closere.onclick = function(){
-            poppup30.style.display = 'none'
-        }
-        btnreport.onclick = function(){
-            poppup30.style.display = 'none'
-            popup99.style.display = 'block'
-            setTimeout(function(){
-                popup99.style.display = 'none'
-            },3500)
-        }
-    </script>
 </body>
 </html>

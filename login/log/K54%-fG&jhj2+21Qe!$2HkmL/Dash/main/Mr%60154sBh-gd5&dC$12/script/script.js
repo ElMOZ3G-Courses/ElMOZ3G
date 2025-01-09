@@ -17,6 +17,11 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getDatabase(app);
 
+const uname = document.getElementById('name')
+const email = document.getElementById('email')
+const vemail = document.getElementById('emailVerified')
+const uidd = document.getElementById('uid')
+
 // Check if the user is logged in
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -35,14 +40,9 @@ firebase.auth().onAuthStateChanged((user) => {
                 console.error("Error fetching user data:", error);
             });
     } else {
-        console.log("User   is not logged in.");
+        console.log("User  is not logged in.");
     }
 });
-
-const uname = document.getElementById('name')
-const email = document.getElementById('email')
-const vemail = document.getElementById('emailVerified')
-const uidd = document.getElementById('uid')
 
 import { getAuth3 } from "firebase/auth";
 
