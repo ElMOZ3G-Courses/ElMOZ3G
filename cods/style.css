@@ -29,7 +29,7 @@ a{margin-right: 10px; top: 50px; color: white; text-decoration: none; font-size:
 .up{color: rgb(106, 87, 177); animation-name: up; animation-duration: 3s;}
 .up:hover{
     color: rgb(76, 27, 253);
-    transform: translate3d(0,-3px,.01px)
+    transform: translate3d(0,-3px,.01px);
 }
 @keyframes up{
     1%{     color: rgb(255, 255, 255);

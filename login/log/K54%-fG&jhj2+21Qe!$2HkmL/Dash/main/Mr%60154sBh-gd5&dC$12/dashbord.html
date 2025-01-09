@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-2256107027130357">
     <title>Home</title>
     <link rel="stylesheet" href="script/dash-style.css">
+    <link rel="icon" href="png/ElMOZ3G.png">
 </head>
 <body>
     <div class="dashboard-container">
         <header class="header">
-            <h1>Home</h1>
+            <h1 class="home-top">Home</h1>
             <div class="user-profile">
                 <span style="color: rgb(93, 39, 230);" class="span-name" id="username">John Doe</span>
                 <img src="png/profile.png" alt="User  Profile">
@@ -20,9 +22,9 @@
             <nav>
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Analytics</a></li>
-                    <li><a href="#">Reports</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="#" class="active">Analytics</a></li>
+                    <li><a style="cursor: pointer;" class="active" id="report-1">Report</a></li>
+                    <li><a href="#" class="active">Settings</a></li>
                 </ul>
             </nav>
         </aside>
@@ -33,11 +35,11 @@
                     <h2>Total Users</h2>
                     <p>1,234</p>
                 </div>
-                <div class="card">
+                <div class="card2">
                     <h2>Actual prices of courses</h2>
                     <p>$12,345</p>
                 </div>
-                <div class="card">
+                <div class="card3">
                     <h2 >Number of courses</h2>
                     <p>15</p>
                 </div>
@@ -52,6 +54,46 @@
             </div>
         </main>
     </div>
+
+    <center>
+        <div class="popup30" id="popup30">
+            <div class="popup330">
+                <header>
+                    <img src="png/close.png" class="close" alt="close" id="close-re">
+                </header>
+                <div class="eff">
+                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                    <dotlottie-player src="https://lottie.host/6571d4f4-d486-44ef-a58e-d0c74d44fb15/UHZAQyMdfo.lottie" background="transparent" speed="1" style="width: 235px; height: 235px" loop autoplay></dotlottie-player>
+                </div>
+                <center>
+                    <div class="div-h2">
+                        <h2 style="color: white;">
+                            Write a report
+                        </h2>
+                    </div>
+                </center>
+                <div class="main">
+                    <main>
+                        <div class="in-re">
+                            <input type="text" class="re" id="report" placeholder="Report">
+                        </div>
+                        <div class="bu-re">
+                            <button class="bu-report" id="report-btn">Report</button>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <center>
+        <div class="popup99">
+            <div class="popup900">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/d0a718a8-08aa-49a9-b458-7d36a77d14c4/HoICuMVzrN.lottie" background="transparent" speed="1" style="width: 230px; height: 230px" loop autoplay></dotlottie-player>
+            </div>
+        </div>
+    </center>
 
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
@@ -112,20 +154,45 @@
 
         const auth = getAuth3();
         const user = auth.currentUser;
-        if (user !== null) {
-        // The user object has basic properties such as display name, email, etc.
-        const displayName = uname.displayName;
-        const email = email.email;
-        const emailVerified = vemail.emailVerified;
+        // Check if the user is logged in
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                const userId = user.uid;
 
-        // The user's ID, unique to the Firebase project. Do NOT use
-        // this value to authenticate with your backend server, if
-        // you have one. Use User.getToken() instead.
-        const uid = uidd.uid;
-        uname.innerHTML = displayName,
-        email.innerHTML = email,
-        vemail.innerHTML = emailVerified,
-        uidd.innerHTML = uid
+                // Fetch user data from the database
+                firebase.database().ref('users/' + userId).once('value')
+                    .then((snapshot) => {
+                        const userData = snapshot.val();
+
+                        // Display the username in the <span> element
+                        const usernameSpan = document.getElementById('username');
+                        usernameSpan.textContent = userData.username; // Update the span with the username
+                    })
+                    .catch((error) => {
+                        console.error("Error fetching user data:", error);
+                    });
+            } else {
+                console.log("User    is not logged in.");
+            }
+        });
+
+        const report1 = document.getElementById('report-1')
+        const poppup30 = document.getElementById('popup30')
+        const closere = document.getElementById('close-re')
+        const btnreport = document.getElementById('report-btn')
+        const popup99 = document.querySelector('.popup99')
+        report1.onclick = function(){
+            poppup30.style.display = 'block'
+        }
+        closere.onclick = function(){
+            poppup30.style.display = 'none'
+        }
+        btnreport.onclick = function(){
+            poppup30.style.display = 'none'
+            popup99.style.display = 'block'
+            setTimeout(function(){
+                popup99.style.display = 'none'
+            },3500)
         }
     </script>
 </body>

@@ -48,26 +48,43 @@ import { getAuth3 } from "firebase/auth";
 
 const auth = getAuth3();
 const user = auth.currentUser;
-if (user !== null) {
-  // The user object has basic properties such as display name, email, etc.
-    const displayName = uname.displayName;
-    const email = email.email;
-    const emailVerified = vemail.emailVerified;
+// Check if the user is logged in
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        const userId = user.uid;
 
-    // The user's ID, unique to the Firebase project. Do NOT use
-    // this value to authenticate with your backend server, if
-    // you have one. Use User.getToken() instead.
-    const uid = uidd.uid;
-    uname.innerHTML = displayName,
-    email.innerHTML = email,
-    vemail.innerHTML = emailVerified,
-    uidd.innerHTML = uid,
+        // Fetch user data from the database
+        firebase.database().ref('users/' + userId).once('value')
+            .then((snapshot) => {
+                const userData = snapshot.val();
 
+                // Display the username in the <span> element
+                const usernameSpan = document.getElementById('username');
+                usernameSpan.textContent = userData.username; // Update the span with the username
+            })
+            .catch((error) => {
+                console.error("Error fetching user data:", error);
+            });
+    } else {
+        console.log("User    is not logged in.");
+    }
+});
 
-    user.providerData.forEach((profile) => {
-    console.log("Sign-in provider: " + profile.emailVerified);
-    console.log("  Provider-specific UID: " + profile.uid);
-    console.log("  Name: " + profile.displayName);
-    console.log("  Email: " + profile.email);
-  });
+const report1 = document.getElementById('report-1')
+const poppup30 = document.getElementById('popup30')
+const closere = document.getElementById('close-re')
+const btnreport = document.getElementById('report-btn')
+const popup99 = document.querySelector('.popup99')
+report1.onclick = function(){
+    poppup30.style.display = 'block'
+}
+closere.onclick = function(){
+    poppup30.style.display = 'none'
+}
+btnreport.onclick = function(){
+    poppup30.style.display = 'none'
+    popup99.style.display = 'block'
+    setTimeout(function(){
+        popup99.style.display = 'none'
+    },3500)
 }
