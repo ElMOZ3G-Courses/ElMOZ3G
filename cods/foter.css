@@ -39,7 +39,7 @@
 }
 .contaner12{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    margin-left: 1000px;
+    margin-left: 400px;
 }

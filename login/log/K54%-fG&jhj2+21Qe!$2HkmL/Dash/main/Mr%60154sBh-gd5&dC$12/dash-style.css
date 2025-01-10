@@ -470,3 +470,30 @@ h4{
         color: white;
     }
 }
+@media screen and (max-width: 1460px) {
+    .header {
+        width: 80%;
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: transparent;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: white 2px solid;
+        color: white;
+        border-radius: 0px 0px 20px 0px;
+        animation-name: hed1;
+        animation-duration: 2s;
+    }
+    @keyframes hed1{
+        0%{
+            width: 20px;
+            transform: scale(0.5);
+        }
+        100%{
+            width: 97%;
+            transform: scale(1);
+        }
+    }
+}

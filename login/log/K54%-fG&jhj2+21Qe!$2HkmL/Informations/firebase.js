@@ -85,6 +85,7 @@ login1.onclick = function(event2){
         .catch((error) => {
             const errorMessage = error.message;
             alert(errorMessage);
+            popup.style.display = 'none'
         });
     },4000)
 }
