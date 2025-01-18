@@ -375,7 +375,10 @@ input::placeholder{
         transform: scale(1);
     }
 }
-
+.wel{
+    display: flex;
+    flex-direction: row;
+}
 @media screen and (max-width: 950px) {
     .contaner-1, .con-html, .con-css, .cards {
         display: flex;

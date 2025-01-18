@@ -88,12 +88,13 @@ btnreport.onclick = function(){
         popup99.style.display = 'none'
     },3500)
 }
-let popupcontaner1 = document.querySelector('.contaner-1')
-let html = document.querySelector('.popup-html')
-let closehtml = document.querySelector('.close-icon')
-popupcontaner1.onclick = function(){
-    html.style.display = 'block'
+
+document.querySelector('.contaner-1').onclick = function(){
+    document.querySelector('.popup-html').style.display = 'block'
 }
-closehtml.onclick = function(){
-    html.style.display = 'none'
+document.querySelector('.close-icon').onclick = function(){
+    document.querySelector('.popup-html').style.display = 'none'
 }
+const uname33 = document.getElementById('username').value
+const homename = document.querySelector('.home-top')
+homename.innerHTML = uname33;
