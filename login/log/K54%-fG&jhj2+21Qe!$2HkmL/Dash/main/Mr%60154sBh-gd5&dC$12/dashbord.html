@@ -126,6 +126,37 @@
         </div>
     </center>
 
+
+    <script>
+        let report1 = document.getElementById('report-1').value
+        let poppup30 = document.getElementById('popup30').value
+        let closere = document.getElementById('close-re').value
+        let btnreport = document.getElementById('report-btn').value
+        let popup99 = document.querySelector('.popup99').value
+        report1.onclick = function(){
+            poppup30.style.display = 'block'
+        }
+        closere.onclick = function(){
+            poppup30.style.display = 'none'
+        }
+        btnreport.onclick = function(){
+            poppup30.style.display = 'none'
+            popup99.style.display = 'block'
+            setTimeout(function(){
+                popup99.style.display = 'none'
+            },3500)
+        }
+        const popht = document.querySelector('.popup-html')
+
+        document.querySelector('.contaner-1').onclick = function(){
+
+            popht.style.display = 'block'
+        }
+        document.querySelector('.close-icon').onclick = function(){
+            popht.style.display = 'none'
+        }
+    </script>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2256107027130357"
      crossorigin="anonymous"></script>
 
