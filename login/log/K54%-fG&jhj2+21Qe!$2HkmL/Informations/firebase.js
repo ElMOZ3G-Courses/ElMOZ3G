@@ -23,18 +23,7 @@ const login1 = document.getElementById('login1');
 
 const popup = document.querySelector('.popup75')
 const popup25 = document.querySelector('.popup25')
-const popup55 = document.querySelector('.popup')
 
-const signup00 = document.getElementById('signup');
-
-signup00.onclick = function(){
-    popup55.style.display = 'block';
-}
-
-const close00 = document.querySelector('.close')
-close00.onclick = function(){
-    popup55.style.display = 'none';
-}
 
 register.onclick = function(event) {
     event.preventDefault();
@@ -42,11 +31,11 @@ register.onclick = function(event) {
     const password = document.getElementById('password-new').value;
     const username = document.getElementById('username').value;
 
-
+    const popup55 = document.querySelector('.popup')
     popup55.style.display = 'none'
     popup.style.display = 'block'
     setTimeout(function(){
-        popup55.style.display = 'none'
+        popup.style.display = 'none'
         popup25.style.display = 'block'
     },2000)
 
