@@ -6,6 +6,34 @@
     scroll-behavior: smooth;
 }
 
+@media (max-width: 768px) {
+    /* أنماط خاصة للشاشات الصغيرة (هواتف) */
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* أنماط خاصة للشاشات المتوسطة (أجهزة لوحية) */
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    /* أنماط خاصة للشاشات الكبيرة (أجهزة كمبيوتر) */
+    body {
+      font-size: 18px;
+    }
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    flex: 1 1 200px; /* العناصر ستتكيف مع العرض المتاح */
+}
+
 .hed1{
     background-color: transparent;
     color: white;
@@ -232,7 +260,6 @@ span{
 .sec2 h2{
     color: white;
 }
-
 
 
 
@@ -1172,9 +1199,20 @@ a{
 
 
 }
-
-@media  only screen and (max-width: 800px) {
-    body{
-        display: none;
+@media  screen and (width: 1280px) {
+    .links{
+        margin-left: 100px;
+    }
+    .name-top{
+        margin-right: 740px;
     }
 }
+@media screen and (max-width: 1240px) {
+    .name-top{
+        margin-right: 5px;
+    }
+    .links{
+        margin-left: 760px;
+    }
+}
+

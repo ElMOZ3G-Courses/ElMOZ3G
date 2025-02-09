@@ -29,21 +29,4 @@ start.onclick = function(){
     setTimeout(function(){window.location.href = "login/log/K54%25-fG&jhj2+21Qe!$2HkmL/login.html"},100);
 }
 let header = document.querySelector('.hed1')
-
-if (window.innerWidth <= 800) {
-    if (body1) {
-      body1.style.display = 'none';
-    } else {
-      console.error("Element with class 'bd' not found.");
-    }
-    if(nodevice)
-    {
-      nodevice.style.display = "block";
-    } else{
-      console.error("Element with class 'no-device' not found.");
-    }
-    if(body2Element)
-    {
-      body2Element.style.display = "block"
-    }
-}
+alert("عرض الشاشة: " + window.innerWidth + "px");
