@@ -1215,4 +1215,11 @@ a{
         margin-left: 760px;
     }
 }
-
+@media screen and (width: 931px) {
+    .name-top{
+        margin-right: 5px;
+    }
+    .links{
+        margin-left: 480px;
+    }
+}
