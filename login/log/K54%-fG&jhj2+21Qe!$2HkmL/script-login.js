@@ -90,3 +90,17 @@ login1.onclick = function(event2){
         });
     },4000)
 }
+
+const user = firebase.auth().currentUser;
+if (user) {
+  db.collection("users").doc(user.uid).set({
+    username: username,
+    email: user.email,
+  }, { merge: true })
+  .then(() => {
+    console.log("تم حفظ اسم المستخدم!");
+  })
+  .catch((error) => {
+    console.error("Error saving username: ", error);
+  });
+}

@@ -151,6 +151,23 @@
         document.querySelector('.close-icon').onclick = function(){
             popht.style.display = 'none'
         }
+
+        if (user) {
+        db.collection("users").doc(user.uid).get()
+            .then((doc) => {
+            if (doc.exists) {
+                const username = doc.data().username;
+                console.log("اسم المستخدم: ", username);
+                // عرض اسم المستخدم في واجهة المستخدم
+                document.getElementById("username").innerText = username;
+            } else {
+                console.log("المستخدم غير موجود!");
+            }
+            })
+            .catch((error) => {
+            console.error("Error fetching username: ", error);
+            });
+        }
     </script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2256107027130357"
