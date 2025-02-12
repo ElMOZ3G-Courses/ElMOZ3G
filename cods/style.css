@@ -1251,3 +1251,27 @@ a{
         }
     }
 }
+@media screen and (max-width: 1000px) {
+    .name-top{
+        margin-right: 5px;
+    }
+    .links{
+        margin-left: 400px;
+    }
+    .content{font-size: 18px;}
+    *{
+        font-size: 17px;
+    }
+    @media screen and (max-width: 720px) {
+        .name-top{
+            margin-right: 5px;
+        }
+        .links{
+            margin-left: 160px;
+        }
+        .content{font-size: 18px;}
+        *{
+            font-size: 17px;
+        }
+    }
+}

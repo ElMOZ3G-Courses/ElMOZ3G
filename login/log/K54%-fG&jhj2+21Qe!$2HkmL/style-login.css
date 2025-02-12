@@ -216,7 +216,7 @@ body{
     margin-top: 60px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
     body{
       background-image: linear-gradient(to left , rgb(253, 252, 255) , rgb(95, 64, 207));
   }

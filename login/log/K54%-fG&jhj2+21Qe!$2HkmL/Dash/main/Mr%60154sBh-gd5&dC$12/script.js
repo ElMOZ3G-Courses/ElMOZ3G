@@ -101,7 +101,6 @@ const uname33 = document.getElementById('username').value
 const homename = document.querySelector('.home-top')
 homename.innerHTML = uname33;
 
-
 if (user !== null) {
   user.providerData.forEach((profile) => {
     console.log("Sign-in provider: " + profile.providerId);
@@ -110,5 +109,14 @@ if (user !== null) {
     console.log("  Email: " + profile.email);
     console.log("  Photo URL: " + profile.photoURL);
   });
+}
+
+if (user !== null) {
+    const displayName = user.displayName;
+    const email = user.email;
+    const photoURL = user.photoURL;
+    const emailVerified = user.emailVerified;
+    const uid = user.uid;
+    uname33.innerHTML = displayName;
 }
 

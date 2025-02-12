@@ -137,3 +137,31 @@ input::placeholder{
     transform: scale(0.98);
     cursor: pointer;
 }
+@media screen and (max-width: 1000px) {
+    @media screen and (max-width: 800px) {
+        .div-username{
+            width: 410px;
+            height: 45px;
+        }
+        .username{
+            width: 250px;
+        }
+        .div-email-new{
+            width: 410px;
+            height: 45px;
+        }
+        .email-new{
+            width: 250px;
+        }
+        .div-password-new{
+            width: 410px;
+            height: 45px;
+        }
+        .pass-new{
+            width: 250px;
+        }
+        .popup-content{
+            margin-top: 100px;
+        }
+    }
+}

@@ -19,3 +19,8 @@
     width: 80%; /* Responsive width */
     max-width: 500px; /* Maximum width */
 }
+@media screen and (max-width: 1200px) {
+    .popup175{
+        margin-top: 200px;
+    }
+}
